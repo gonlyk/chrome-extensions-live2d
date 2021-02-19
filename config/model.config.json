@@ -1,0 +1,12 @@
+{
+    "modelList": [
+        "model/an94-normal/model.json",
+        "model/an94-destroy/model.json",
+        "model/normal/model.json"
+    ],
+    "modelName": [
+        "an94正常",
+        "an94大破",
+        "RFB正常"
+    ]
+}

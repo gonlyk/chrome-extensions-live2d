@@ -1,0 +1,40 @@
+{
+    "manifest_version": 2,
+    "name": "live2d-extensions",
+    "description": "live2d extensions",
+    "version": "0.0.2",
+    "browser_action": {
+        "default_icon": "zzz.png",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "./src/vendor/L2Dwidget.min.js",
+                "src/live2d.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "background": {
+        "scripts": [
+            "src/background.js"
+        ]
+    },
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "activeTab",
+        "storage",
+        "contextMenus",
+        "cookies"
+    ],
+    "web_accessible_resources": [
+        "model/*",
+        "config/*"
+    ]
+}
